@@ -48,7 +48,7 @@ async function login(info) {
   let { oauth2cookie, location } = await http({
     method: 'post',
     url: 'https://api.weishao.com.cn/login?source=%2Foauth%2Fauthorize%3Fclient_id%3DpqZ3wGM07i8R9mR3%26redirect_uri%3Dhttps%253A%252F%252Fyq.weishao.com.cn%252Fcheck%252Fquestionnaire%26response_type%3Dcode%26scope%3Dbase_api%26state%3Druijie',
-    data: `schoolcode=xmut&username=${info['学号']}&password=${info['密码']}&verifyValue=&verifyKey=${info['学号']}_xmut&ssokey=`,
+    data: `schoolcode=jsnu&username=${info['学号']}&password=${info['密码']}&verifyValue=&verifyKey=${info['学号']}_xmut&ssokey=`,
   }).then((res) => {
     let oauth2cookie = res.headers['set-cookie'][0].match(/^(.*?);/)[1]
     let location = res.headers['location']
